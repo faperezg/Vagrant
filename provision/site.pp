@@ -16,7 +16,7 @@ apache::vhost { 'webconsole.corplaurus.int non-ssl':
       'path'           => '/var/www/web',
       'allow'          => 'from all',
       'allow_override' => 'All',
-      'options'        => ['Indexes', 'MultiViews'],
+      'options'        => ['Indexes', 'FollowSymLinks', 'MultiViews'],
     }
   ],
   access_log_file => 'webconsole_access.log',
@@ -32,7 +32,7 @@ apache::vhost { 'webconsole.corplaurus.int ssl':
       'path'           => '/var/www/web',
       'allow'          => 'from all',
       'allow_override' => 'All',
-      'options'        => ['Indexes', 'MultiViews'],
+      'options'        => ['Indexes', 'FollowSymLinks', 'MultiViews'],
     }
   ],
   access_log_file => 'webconsole_ssl_access.log',
