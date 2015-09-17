@@ -23,7 +23,7 @@ This is a configuration file which starts two virtual machines:
   - A MySQL database
   - The provisioning is done using puppet-apply
   - It is based on a VagrantFile created with http://www.puphpet.com/. Those guys are really amazing
-  - When VM is completely provisioned, network autoconfig should be disabled. This is done using parameter $needs_provisioning in VagrantFile.
+  - When VM is completely provisioned, network autoconfig should be disabled. This is done using parameter $needs_provision in VagrantFile.
   - Additionally, Vagrant creates eth0 NATted network. It should not be used by the system. So, I wrote a tiny shell script which corrects routes and is executed as provisioning when $needs_provision = false
 
 DISCLAIMER: This file was done for learning purposes of the following technologies:
